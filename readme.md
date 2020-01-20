@@ -1,4 +1,11 @@
-## Simple API
+# Simple API
+
+### Run
+```npm install``` to initialize modules
+
+```npm run webpack``` to initialize dist and run the hot reload
+
+```npm start``` to start the server 
 
 ### Route List
 - ```GET {domain}/items```      : get list of items
