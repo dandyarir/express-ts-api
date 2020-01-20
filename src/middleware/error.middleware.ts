@@ -1,0 +1,16 @@
+import HttpExeption from '../common/http-exception';
+import { Request, Response, NextFunction } from 'express';
+
+export const errorHandler = (
+    error: HttpExeption,
+    request: Request,
+    response: Response,
+    next: NextFunction
+) => {
+    const status = error.status || 500;
+
+    const message = 
+        error.message || "It's not you. It's us. We are having some problems.";
+
+    response.status(status).send(message);
+}
